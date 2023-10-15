@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="sliteshow.css" />
+        <script src="script.js" defer></script>
+        <title>Slideshow</title>
+    </head>
+    <body>
+        <div class="banner-slider">
+            <div class="banner-slide fade">
+                <div class="content">
+                    <h1>IMAGE 1</h1>
+                    <p>Web developper building websites</p>
+                </div>
+                <img src="img/img-1.jpg" />
+            </div>
+            <div class="banner-slide fade" style="display: none">
+                <div class="content">
+                    <h1>IMAGE 2</h1>
+                    <p>Web developper building websites</p>
+                </div>
+                <img src="img/img-2.jpg" />
+            </div>
+            <div class="banner-slide fade" style="display: none">
+                <div class="content">
+                    <h1>IMAGE 3</h1>
+                    <p>Web developper building websites</p>
+                </div>
+                <img src="img/img-3.jpg" />
+            </div>
+            <span href="" class="prev" onclick="plusSlide(-1)">&#10094;</span>
+            <span href="" class="next" onclick="plusSlide(1)">&#10095;</span>
+
+            <div class="dotsbox">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </body>
+</html>
