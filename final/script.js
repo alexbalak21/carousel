@@ -3,10 +3,11 @@ const prev = document.querySelector("#prev")
 const slider = document.querySelector(".slider")
 
 let sliderPosition = 0
+const delay = 8000
 let movingRight = true
-let number_of_slides = 3
+let number_of_slides = slider.querySelectorAll("img").length
 let width = window.innerWidth
-let timer = setInterval(autoslider, 8000)
+let timer = setInterval(autoslider, delay)
 window.addEventListener("resize", () => (width = window.innerWidth))
 
 if (sliderPosition === 0) prev.style.display = "none"
@@ -26,7 +27,7 @@ function autoslider() {
 function scrollRight() {
     slider.scrollTo((sliderPosition += width), 0)
     clearInterval(timer)
-    timer = setInterval(autoslider, 8000)
+    timer = setInterval(autoslider, delay)
     prev.addEventListener("click", scrollLeft)
     prev.style.display = "block"
 
@@ -39,7 +40,7 @@ function scrollRight() {
 function scrollLeft() {
     if (sliderPosition > 0) slider.scrollTo((sliderPosition -= width), 0)
     clearInterval(timer)
-    timer = setInterval(autoslider, 8000)
+    timer = setInterval(autoslider, delay)
     next.addEventListener("click", scrollRight)
     next.style.display = "block"
     if (sliderPosition <= 0) {
