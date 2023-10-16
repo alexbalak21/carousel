@@ -1,12 +1,12 @@
-:root {
-    --chevron-size: 40px;
-    --chevron-color: purple;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+:root {
+    --chevron-size: 40px;
+    --chevron-color: purple;
 }
 
 .banner {
@@ -20,10 +20,27 @@
     overflow: hidden;
 }
 
+.slide-container {
+    min-width: 100%;
+    border: 5px solid blue;
+    position: relative;
+}
+
+.slide-container .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6901960784);
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+}
+
 .banner img {
     object-fit: cover;
     object-position: center;
-    min-width: 100%;
+    width: 100%;
     height: 100%;
     scroll-snap-align: start;
 }

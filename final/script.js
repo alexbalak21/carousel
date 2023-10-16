@@ -5,7 +5,7 @@ const slider = document.querySelector(".slider")
 let sliderPosition = 0
 const delay = 8000
 let movingRight = true
-let number_of_slides = slider.querySelectorAll("img").length
+let number_of_slides = slider.querySelectorAll(".slide-container").length
 let width = window.innerWidth
 let timer = setInterval(autoslider, delay)
 window.addEventListener("resize", () => (width = window.innerWidth))
